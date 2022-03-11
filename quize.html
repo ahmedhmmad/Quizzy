@@ -1,0 +1,119 @@
+<div class="quiz-header">
+  <h2 id="question">How to list the contents of a folder?</h2>
+  <ul>
+    <!-- <li>
+            <input
+                type="radio"
+                id="a"
+                name="answer"
+                class="answer"
+            />
+            <label id="a_text" for="a">Question</label>
+        </li>
+        <li>
+            <input
+                type="radio"
+                id="b"
+                name="answer"
+                class="answer"
+            />
+            <label id="b_text" for="b">Question</label>
+        </li>
+        <li>
+            <input
+                type="radio"
+                id="c"
+                name="answer"
+                class="answer"
+            />
+            <label id="c_text" for="c">Question</label>
+        </li>
+        <li>
+            <input
+                type="radio"
+                id="d"
+                name="answer"
+                class="answer"
+            />
+            <label id="d_text" for="d">Question</label>
+        </li> -->
+       
+          
+        <li><input type="radio" class="answer" value="answer_a" id="answer_a"><br></li>
+
+
+    <ul>
+      <label for="answer_a"
+        >Scripting Language<input
+          type="radio"
+          class="answer"
+          value="answer_a"
+          id="answer_a" /><br /></label
+      ><label for="answer_b"
+        >Markup Language<input
+          type="radio"
+          class="answer"
+          value="answer_b"
+          id="answer_b" /><br /></label
+      ><label for="answer_c"
+        >Programming Language<input
+          type="radio"
+          class="answer"
+          value="answer_c"
+          id="answer_c" /><br /></label
+      ><label for="answer_d"
+        >Network Protocol<input
+          type="radio"
+          class="answer"
+          value="answer_d"
+          id="answer_d" /><br
+      /></label>
+    </ul>
+
+    let a_text = document.getElementById("a_text"); let b_text =
+    document.getElementById("b_text"); let c_text =
+    document.getElementById("c_text"); let d_text =
+    document.getElementById("d_text"); let
+    listElement=document.querySelector("ul") let submitBtn =
+    document.getElementById("submit"); let Quizzes=[]
+    fetch(`https://quizapi.io/api/v1/questions?apiKey=TM7jRsopbYOoYsKZTcQ7eidrz68jRfjqBsQxDao5&limit=3`)
+    .then(res=>res.json()) .then(data=>data.forEach((element,index)=>{
+    Quizzes.push(element) console.log(element,index) //
+    console.log('Inside',Quizzes.length) } ) ) .catch(err=>console.log('Error' +
+    err)) //console.log('Quizzes',Quizzes) // console.log(Quizzes) let
+    currentQuiz=0 let score=0 //showQuiz() setTimeout(()=>{ showQuiz() },1000)
+    function showQuiz() { let quiz=Quizzes[currentQuiz]
+    document.getElementById("question").innerHTML=quiz.question
+    //console.log(quiz.answers['answer_a']); for (ans in quiz.answers) { //check
+    if ans is null if(quiz.answers[ans]!=null) { //console.log(ans) let
+    li=document.createElement("li") // li.innerHTML=quiz.answers[ans]
+    //listElement.appendChild(li) let radioBtn=document.createElement("input")
+    radioBtn.setAttribute("type","radio")
+    //radioBtn.setAttribute("name","answer")
+    radioBtn.setAttribute('class','answer') radioBtn.setAttribute("value",ans)
+    radioBtn.setAttribute("id",ans) // li.appendChild(radioBtn)
+    radioBtn.appendChild(li) let label=document.createElement("label")
+    label.setAttribute("for",ans) label.textContent=quiz.answers[ans]
+    console.log(label); label.appendChild(radioBtn) //
+    radioBtn.appendChild(label) //
+    listElement.appendChild(label).appendChild(document.createElement("br"))
+    listElement.appendChild(label).appendChild(document.createElement("br")) //
+    let answer=quiz.answers[ans] // let radioBtn=document.createElement("input")
+    // radioBtn.setAttribute("type","radio") //
+    radioBtn.setAttribute("name","answer") // radioBtn.setAttribute("value",ans)
+    // radioBtn.setAttribute("id",ans) //
+    document.getElementById(ans).appendChild(radioBtn) // let
+    label=document.createElement("label") // label.setAttribute("for",ans) //
+    label.innerHTML=quiz.answers[ans] //
+    document.getElementById("answers").appendChild(label) //
+    listElement.appendChild('answers').appendChild(document.createElement("br"))
+    //document.getElementById("answers") } // if(quiz.answers[ans]!==null) // {
+    // a_text.textContent=quiz.answers[ans] //
+    b_text.textContent=quiz.answers[ans] // c_text.textContent=quiz.answers[ans]
+    // d_text.textContent=quiz.answers[ans] // } } //
+    a_text.textContent=quiz.answers['answer_a'] //
+    b_text.textContent=quiz.answers['answer_b'] //
+    c_text.textContent=quiz.answers['answer_c'] //
+    d_text.textContent=quiz.answers['answer_d'] }
+  </ul>
+</div>
