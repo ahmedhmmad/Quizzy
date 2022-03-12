@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML preload Attribute</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="other.png"
+      type="image/png"
+      crossorigin="anonymous"
+    />
+    <!--
+    prefetch - next page
+    preload - current page
+    as options:
+    script
+    style
+    audio
+    video
+    image
+    font
+    document
+    track
+    worker
+    fetch
+    object
+    embed
+    -->
+  </head>
+  <body>
+    <header>
+      <h1>HTML preload Attribute</h1>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
