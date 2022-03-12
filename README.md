@@ -5,6 +5,7 @@
 ## :small_orange_diamond: Project description
 
 Quiz Application using [quizapi.io](https://quizapi.io/) API which test your knowledge on a wide variety of technical topics.
+![Quiz Fields](./assets/Quiz%20API.png)
 
 ## :small_orange_diamond: Used Api's
 
